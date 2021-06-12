@@ -20,7 +20,7 @@ const Login = (props) => {
     axios.post('http://localhost:5000/api/login', credentials)
     .then(res => {
       localStorage.setItem('token', res.data.payload)
-      props.history.push('/bubblepage')
+      props.history.push('/bubbles')
     })
     .catch(err => {
       setError('Username or Password not valid')
